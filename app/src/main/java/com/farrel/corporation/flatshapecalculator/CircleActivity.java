@@ -13,11 +13,15 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.text.DecimalFormat;
+
 public class CircleActivity extends AppCompatActivity {
 
     private EditText etRadius;
     private TextView tvPerimeterResult;
     private TextView tvAreaResult;
+    private static final String STATE_RESULT_1 = "state_result_1";
+    private static final String STATE_RESULT_2 = "state_result_2";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,29 +37,51 @@ public class CircleActivity extends AppCompatActivity {
         tvPerimeterResult = (TextView) findViewById(R.id.result_perimeter_value);
         tvAreaResult = (TextView) findViewById(R.id.result_area_value);
 
+        if (savedInstanceState != null) {
+            String resultPerimeter = savedInstanceState.getString(STATE_RESULT_1);
+            String resultArea = savedInstanceState.getString(STATE_RESULT_2);
+            tvPerimeterResult.setText(resultPerimeter);
+            tvAreaResult.setText(resultArea);
+        }
+
     }
 
     public void calcCircleAreaPerimeter(View view) {
         if (view.getId() == R.id.btn_calculate_circle) {
-
             String inputRadius = etRadius.getText().toString().trim();
-            boolean isEmptyField = false;
-
             if (TextUtils.isEmpty(inputRadius)) {
-                isEmptyField = true;
                 etRadius.setError("This field must be filled");
-            }
+            } else {
+                Double radius = toDouble(inputRadius);
+                if (radius == null) {
+                    etRadius.setError("This field must be a number");
+                } else {
+                    double perimeter = 2 * Math.PI * radius;
+                    double area = Math.PI * Math.pow(radius, 2);
 
-            if (!isEmptyField) {
-                Double radius = Double.valueOf(inputRadius);
+//                    tvPerimeterResult.setText(String.valueOf(perimeter));
+//                    tvAreaResult.setText(String.valueOf(area));
 
-                double perimeter = 2 * Math.PI * radius;
-                double area = Math.PI * Math.pow(radius, 2);
-
-                tvPerimeterResult.setText(String.valueOf(perimeter));
-                tvAreaResult.setText(String.valueOf(area));
+                    DecimalFormat decimalFormat = new DecimalFormat("#.##");
+                    tvPerimeterResult.setText(decimalFormat.format(perimeter));
+                    tvAreaResult.setText(decimalFormat.format(area));
+                }
             }
         }
+    }
+
+    private Double toDouble(String str) {
+        try {
+            return Double.valueOf(str);
+        } catch (NumberFormatException e) {
+            return null;
+        }
+    }
+
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putString(STATE_RESULT_1, tvPerimeterResult.getText().toString());
+        outState.putString(STATE_RESULT_2, tvAreaResult.getText().toString());
     }
 
     @Override
