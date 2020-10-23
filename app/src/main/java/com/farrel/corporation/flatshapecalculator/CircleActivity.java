@@ -102,10 +102,10 @@ public class CircleActivity extends AppCompatActivity {
                 Intent rectangleAct = new Intent(CircleActivity.this, RectangleActivity.class);
                 startActivity(rectangleAct);
                 break;
-//            case R.id.menu_triangle :
-//                Intent triangleAct = new Intent(CircleActivity.this, TriangleActivity.class);
-//                startActivity(triangleAct);
-//                break;
+            case R.id.menu_triangle :
+                Intent triangleAct = new Intent(CircleActivity.this, TriangleActivity.class);
+                startActivity(triangleAct);
+                break;
             case R.id.menu_circle :
                 Toast.makeText(CircleActivity.this, "You are still in the circle page", Toast.LENGTH_SHORT).show();
                 break;

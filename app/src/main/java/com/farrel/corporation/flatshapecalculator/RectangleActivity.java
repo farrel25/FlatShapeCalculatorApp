@@ -101,10 +101,10 @@ public class RectangleActivity extends AppCompatActivity {
             case R.id.menu_rectangle :
                 Toast.makeText(RectangleActivity.this, "You are still in the rectangle page", Toast.LENGTH_SHORT).show();
                 break;
-//            case R.id.menu_triangle :
-//                Intent triangleAct = new Intent(RectangleActivity.this, TriangleActivity.class);
-//                startActivity(triangleAct);
-//                break;
+            case R.id.menu_triangle :
+                Intent triangleAct = new Intent(RectangleActivity.this, TriangleActivity.class);
+                startActivity(triangleAct);
+                break;
             case R.id.menu_circle :
                 Intent circleAct = new Intent(RectangleActivity.this, CircleActivity.class);
                 startActivity(circleAct);

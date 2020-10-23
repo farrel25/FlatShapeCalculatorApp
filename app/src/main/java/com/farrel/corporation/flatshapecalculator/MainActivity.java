@@ -27,8 +27,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(rectangleAct);
                 break;
             case R.id.btn_triangle :
-//                Intent triangleAct = new Intent(MainActivity.this,RectangleActivity.class);
-//                startActivity(triangleAct);
+                Intent triangleAct = new Intent(MainActivity.this,TriangleActivity.class);
+                startActivity(triangleAct);
                 break;
             case R.id.btn_circle :
                 Intent circleAct = new Intent(MainActivity.this,CircleActivity.class);
