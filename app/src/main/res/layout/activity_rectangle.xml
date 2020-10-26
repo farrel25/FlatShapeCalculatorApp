@@ -17,7 +17,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Perimeter and Area"
+            android:text="@string/title_header_calculator"
             android:layout_margin="16dp"
             android:textColor="@color/linxWhite"
             android:textSize="24sp"
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:background="@drawable/text_navigation_background"
-                android:text="Enter the side length below"
+                android:text="@string/nav_enter_side_length"
                 android:textColor="@color/linxWhite"
                 android:textSize="16sp"
                 android:layout_centerHorizontal="true"
@@ -68,7 +68,7 @@
                 android:layout_width="250dp"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_navigation"
-                android:hint="Enter a number"
+                android:hint="@string/placeholder_input_number"
                 android:layout_marginTop="16dp"
                 android:layout_marginHorizontal="16dp"
                 android:layout_centerHorizontal="true"
@@ -76,26 +76,60 @@
                 android:inputType="numberDecimal"
                 />
 
-            <Button
-                android:id="@+id/btn_calculate_rectangle"
-                android:layout_width="wrap_content"
+<!--            <Button-->
+<!--                android:id="@+id/btn_calculate_rectangle"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Calculate"-->
+<!--                android:layout_below="@id/et_input_number"-->
+<!--                android:layout_centerHorizontal="true"-->
+<!--                android:layout_marginHorizontal="16dp"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:backgroundTint="@color/yellow"-->
+<!--                android:textColor="@color/linxWhite"-->
+<!--                android:onClick="calcRectangleAreaPerimeter"-->
+<!--                />-->
+
+            <LinearLayout
+                android:id="@+id/btn_group"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Calculate"
+                android:orientation="horizontal"
                 android:layout_below="@id/et_input_number"
-                android:layout_centerHorizontal="true"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginTop="16dp"
-                android:backgroundTint="@color/yellow"
-                android:textColor="@color/linxWhite"
-                android:onClick="calcRectangleAreaPerimeter"
-                />
+                android:gravity="center"
+                >
+
+                <Button
+                    android:id="@+id/btn_calculate_rectangle"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_text_calculate"
+                    android:backgroundTint="@color/yellow"
+                    android:textColor="@color/linxWhite"
+                    android:onClick="calcRectangleAreaPerimeter"
+                    android:layout_marginEnd="12dp"
+                    />
+
+                <Button
+                    android:id="@+id/btn_reset"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_text_reset"
+                    android:backgroundTint="@color/yellow"
+                    android:textColor="@color/linxWhite"
+                    android:onClick="resetCalculation"
+                    />
+
+            </LinearLayout>
 
             <LinearLayout
                 android:id="@+id/result_group"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:layout_below="@id/btn_calculate_rectangle"
+                android:layout_below="@id/btn_group"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginVertical="20dp"
                 android:layout_centerHorizontal="true"
@@ -116,7 +150,7 @@
                         android:id="@+id/result_perimeter_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Perimeter"
+                        android:text="@string/title_result_perimeter"
                         android:textColor="@color/linxWhite"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -129,7 +163,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/result_perimeter_title"
-                        android:text="..."
+                        android:text="@string/placeholder_result"
                         android:textColor="@color/linxWhite"
                         android:textSize="14sp"
                         android:layout_centerHorizontal="true"
@@ -151,7 +185,7 @@
                         android:id="@+id/result_area_title"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Area"
+                        android:text="@string/title_result_area"
                         android:textColor="@color/linxWhite"
                         android:textSize="16sp"
                         android:textStyle="bold"
@@ -164,7 +198,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/result_area_title"
-                        android:text="..."
+                        android:text="@string/placeholder_result"
                         android:textColor="@color/linxWhite"
                         android:textSize="14sp"
                         android:layout_centerHorizontal="true"

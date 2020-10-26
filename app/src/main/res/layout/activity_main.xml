@@ -24,8 +24,8 @@
 
             <ImageView
                 android:id="@+id/rectangle_pict"
-                android:layout_width="270px"
-                android:layout_height="270px"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:src="@drawable/rectangle"
                 android:layout_marginStart="8dp"
                 android:layout_centerVertical="true"
@@ -47,17 +47,17 @@
                     android:id="@+id/shape_rectangle_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Rectangle"
+                    android:text="@string/title_rectangle"
                     android:textColor="@color/linxWhite"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     />
 
                 <TextView
                     android:id="@+id/shape_rectangle_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="calculate the perimeter and area of rectangle"
+                    android:text="@string/menu_content_rectangle"
                     android:textColor="@color/linxWhite"
                     />
 
@@ -65,7 +65,7 @@
                     android:id="@+id/btn_rectangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calculate"
+                    android:text="@string/btn_text_calculate"
                     android:textAllCaps="false"
                     android:textColor="@color/linxWhite"
                     android:backgroundTint="@color/yellow"
@@ -84,8 +84,8 @@
 
             <ImageView
                 android:id="@+id/triangle_pict"
-                android:layout_width="270px"
-                android:layout_height="270px"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:src="@drawable/triangle"
                 android:layout_marginStart="8dp"
                 android:layout_centerVertical="true"
@@ -107,17 +107,17 @@
                     android:id="@+id/shape_triangle_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Triangle"
+                    android:text="@string/title_triangle"
                     android:textColor="@color/linxWhite"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     />
 
                 <TextView
                     android:id="@+id/shape_triangle_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="calculate the perimeter and area of triangle"
+                    android:text="@string/menu_content_triangle"
                     android:textColor="@color/linxWhite"
                     />
 
@@ -125,7 +125,7 @@
                     android:id="@+id/btn_triangle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calculate"
+                    android:text="@string/btn_text_calculate"
                     android:textAllCaps="false"
                     android:textColor="@color/linxWhite"
                     android:backgroundTint="@color/yellow"
@@ -144,8 +144,8 @@
 
             <ImageView
                 android:id="@+id/circle_pict"
-                android:layout_width="270px"
-                android:layout_height="270px"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
                 android:src="@drawable/circle"
                 android:layout_marginStart="8dp"
                 android:layout_centerVertical="true"
@@ -167,17 +167,17 @@
                     android:id="@+id/shape_circle_title"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Circle"
+                    android:text="@string/title_circle"
                     android:textColor="@color/linxWhite"
                     android:textStyle="bold"
-                    android:textSize="20dp"
+                    android:textSize="20sp"
                     />
 
                 <TextView
                     android:id="@+id/shape_circle_content"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="calculate the perimeter and area of circle"
+                    android:text="@string/menu_content_circle"
                     android:textColor="@color/linxWhite"
                     />
 
@@ -185,12 +185,13 @@
                     android:id="@+id/btn_circle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Calculate"
+                    android:text="@string/btn_text_calculate"
                     android:textAllCaps="false"
                     android:textColor="@color/linxWhite"
                     android:backgroundTint="@color/yellow"
                     android:onClick="moveToShapeCalculator"
                     />
+
             </LinearLayout>
 
         </RelativeLayout>

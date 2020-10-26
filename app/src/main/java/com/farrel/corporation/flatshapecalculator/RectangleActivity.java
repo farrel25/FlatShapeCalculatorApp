@@ -30,7 +30,7 @@ public class RectangleActivity extends AppCompatActivity {
 
         if(getSupportActionBar() != null) {
             getSupportActionBar().setElevation(0);
-            getSupportActionBar().setTitle("Rectangle");
+            getSupportActionBar().setTitle(R.string.title_rectangle);
         }
 
         etSideLength = (EditText) findViewById(R.id.et_input_number);
@@ -76,6 +76,12 @@ public class RectangleActivity extends AppCompatActivity {
         } catch (NumberFormatException e) {
             return null;
         }
+    }
+
+    public void resetCalculation(View view) {
+        etSideLength.setText("");
+        tvPerimeterResult.setText("...");
+        tvAreaResult.setText("...");
     }
 
     protected void onSaveInstanceState(@NonNull Bundle outState) {

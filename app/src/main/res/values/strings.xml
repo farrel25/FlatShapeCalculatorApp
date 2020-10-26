@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">FlatShapeCalculator</string>
+    <string name="app_name">Flat Shape Calculator</string>
+    <string name="title_rectangle">Rectangle</string>
+    <string name="title_triangle">Triangle</string>
+    <string name="title_circle">Circle</string>
+    <string name="menu_content_rectangle">calculate the perimeter and area of rectangle</string>
+    <string name="menu_content_triangle">calculate the perimeter and area of triangle</string>
+    <string name="menu_content_circle">calculate the perimeter and area of circle</string>
+    <string name="btn_text_calculate">Calculate</string>
+    <string name="btn_text_reset">Reset</string>
+    <string name="title_header_calculator">Perimeter and Area</string>
+    <string name="nav_enter_radius">Enter the radius below</string>
+    <string name="nav_enter_side_length">Enter the side length below</string>
+    <string name="placeholder_input_number">Enter a number</string>
+    <string name="title_result_perimeter">Perimeter</string>
+    <string name="title_result_area">Area</string>
+    <string name="placeholder_result">…</string>
 </resources>

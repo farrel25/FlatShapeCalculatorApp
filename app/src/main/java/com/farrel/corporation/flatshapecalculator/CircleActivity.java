@@ -30,7 +30,7 @@ public class CircleActivity extends AppCompatActivity {
 
         if(getSupportActionBar() != null) {
             getSupportActionBar().setElevation(0);
-            getSupportActionBar().setTitle("Circle");
+            getSupportActionBar().setTitle(R.string.title_circle);
         }
 
         etRadius = (EditText) findViewById(R.id.et_input_number);
@@ -76,6 +76,12 @@ public class CircleActivity extends AppCompatActivity {
         } catch (NumberFormatException e) {
             return null;
         }
+    }
+
+    public void resetCalculation(View view) {
+        etRadius.setText("");
+        tvPerimeterResult.setText("...");
+        tvAreaResult.setText("...");
     }
 
     protected void onSaveInstanceState(@NonNull Bundle outState) {
